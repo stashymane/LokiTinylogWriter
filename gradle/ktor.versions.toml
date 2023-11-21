@@ -1,0 +1,12 @@
+[versions]
+ktor = "2.3.6"
+
+[libraries]
+serialization-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+resources = { group = "io.ktor", name = "ktor-resources", version.ref = "ktor" }
+
+client-engine = { group = "io.ktor", name = "ktor-client-cio", version.ref = "ktor" }
+client-resources = { group = "io.ktor", name = "ktor-client-resources", version.ref = "ktor" }
+client-contentNegotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+
+test-server = { group = "io.ktor", name = "ktor-server-test-host", version.ref = "ktor" }
