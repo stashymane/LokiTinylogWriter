@@ -1,9 +1,10 @@
 plugins {
+    `maven-publish`
     alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.serialization)
 }
 
-group = "lt.kaskur"
+group = "dev.stashy.lokiwriter"
 version = "1.0-SNAPSHOT"
 
 dependencies {
@@ -19,4 +20,13 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+publishing.publications {
+    create<MavenPublication>("maven") {
+        groupId = rootProject.group.toString()
+        artifactId = rootProject.name
+        version = rootProject.version.toString()
+        from(components["java"])
+    }
 }
